@@ -63,6 +63,7 @@ async def generate_languages(s: Stats) -> None:
         (await s.languages).items(), reverse=True, key=lambda t: t[1].get("occurrences", 0)
     )
     delay_between = 150
+    print(sorted_languages)
     for i, (lang, data) in enumerate(sorted_languages):
         color = data.get("color")
         color = color if color is not None else "#000000"
