@@ -59,7 +59,6 @@ async def generate_languages(s: Stats) -> None:
 
     progress = ""
     lang_list = ""
-    sorted_languages
     sorted_languages = sorted(
         (await s.languages).items(), reverse=True, key=lambda t: t[1].get("size", 0)
     )
