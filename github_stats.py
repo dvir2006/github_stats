@@ -378,7 +378,6 @@ Languages:
             self._languages["C"]["size"] -= 8000000
         # TODO: Improve languages to scale by number of contributions to
         #       specific filetypes
-        self._languages.re
         langs_total = sum([v.get("size", 0) for v in self._languages.values()])
         for k, v in self._languages.items():
             v["prop"] = 100 * (v.get("size", 0) / langs_total)
