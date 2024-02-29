@@ -376,6 +376,8 @@ Languages:
 
         if "C" in self._languages:
             self._languages["C"]["size"] = 50000
+        if "C++" in self._languages:
+            self._languages["C++"]["size"] -= (1024*850)
         # TODO: Improve languages to scale by number of contributions to
         #       specific filetypes
         langs_total = sum([v.get("size", 0) for v in self._languages.values()])
